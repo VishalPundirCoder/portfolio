@@ -1,24 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import './index.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        {/* <Header /> */}
+        <nav className="bg-blue-500 p-4 text-white">
+          <ul className="flex justify-around">
+            <li>
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/about" 
+                className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}
+              >
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/projects" 
+                className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}
+              >
+                Projects
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/contact" 
+                className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}
+              >
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
