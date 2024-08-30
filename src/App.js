@@ -17,7 +17,7 @@ function App() {
           <ul className="flex justify-around">
             <li>
               <NavLink 
-                to="/" 
+                to="/portfolio" 
                 className={({ isActive }) => (isActive ? 'text-black' : 'text-white')}
               >
                 Home
@@ -51,7 +51,7 @@ function App() {
         </nav>
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />

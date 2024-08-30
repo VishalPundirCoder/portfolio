@@ -8,7 +8,7 @@ const Contact = () => {
    <>
        <div className="m-6">
   <div className="flex flex-col space-y-2">
-    <a href="https://www.linkedin.com/in/vishal-pundir-159944220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="flex items-center text-gray-700 hover:text-blue-500">
+    <a href="https://www.linkedin.com/in/vishal-pundir-159944220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  target="_blank" className="flex items-center text-gray-700 hover:text-blue-500">
       <FaLinkedin />&nbsp;&nbsp;Vishal Pundir
     </a>
     <span className="flex items-center text-gray-700">
