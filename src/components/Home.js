@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link ,useLocation} from 'react-router-dom';
+//import logo from './logo.svg';
+import imagt from "./imagt.jpg"
 const Home = () => {
    
   const location = useLocation();
   const currentURL = location.pathname;
     let pdfUrl="portfolio/Vishal Pundir SDE.pdf"
-    let imageUrl="portfolio/imaget.jpg"
+    // let imageUrl="/imaget.jpg"
+    
+    
     if(currentURL.includes("portfolio/")){
       pdfUrl="Vishal Pundir SDE.pdf"
-      imageUrl="imaget.jpg"
-
+      
     }
 
 
@@ -29,7 +32,7 @@ const Home = () => {
       {/* Right side */}
       <div className="w-1/2 flex justify-center items-center">
         <img 
-          src={imageUrl}
+          src={imagt}
           alt="Working on a desk" 
           className="w-3/4 h-auto rounded shadow-lg"
         />
